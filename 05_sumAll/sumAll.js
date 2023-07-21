@@ -7,8 +7,8 @@ const sumAll = function (firstNumber, secondNumber) {
     largerNumber = firstNumber;
     smallerNumber = secondNumber;
   } else {
-    firstNumber = smallerNumber;
-    secondNumber = largerNumber;
+    smallerNumber = firstNumber;
+    largerNumber = secondNumber;
   }
 
   for (let i = smallerNumber; i <= largerNumber; i++) {
