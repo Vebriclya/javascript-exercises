@@ -3,7 +3,6 @@ const sumAll = function (firstNumber, secondNumber) {
   let largerNumber;
   let smallerNumber;
   let result;
-  let isInt;
 
   if (typeof firstNumber != "number" || typeof secondNumber != "number") {
     result = "ERROR";
@@ -19,17 +18,17 @@ const sumAll = function (firstNumber, secondNumber) {
       smallerNumber = firstNumber;
       largerNumber = secondNumber;
     }
-  }
 
-  if (result != "ERROR") {
-    for (let i = smallerNumber; i <= largerNumber; i++) {
-      numbersToAdd.push(i);
+    if (result != "ERROR") {
+      for (let i = smallerNumber; i <= largerNumber; i++) {
+        numbersToAdd.push(i);
+      }
+
+      result = 0;
+      numbersToAdd.forEach((item) => {
+        result += item;
+      });
     }
-
-    result = 0;
-    numbersToAdd.forEach((item) => {
-      result += item;
-    });
   }
 
   return result;
