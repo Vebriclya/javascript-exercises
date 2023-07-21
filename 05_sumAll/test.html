@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        const sumAll = function(firstNumber, secondNumber) {
-            // count up from first number until it is less than the second number
-            // store all those numbers in an array
-            // add them all together
+      const sumAll = function (firstNumber, secondNumber) {
+        let numbersToAdd = [];
+        let largerNumber;
+        let smallerNumber;
 
-            let numbersToAdd = [];
+        if (firstNumber > secondNumber) {
+          largerNumber = firstNumber;
+          smallerNumber = secondNumber;
+        } else {
+          firstNumber = smallerNumber;
+          secondNumber = largerNumber;
+        }
 
-            for(let i = firstNumber; i <= secondNumber; i++){
-                numbersToAdd.push(i);
-            }
+        for (let i = smallerNumber; i <= largerNumber; i++) {
+          numbersToAdd.push(i);
+        }
 
-            let result = 0;
-            numbersToAdd.forEach(item => {
-                result += item;
-            }
-            )
+        let result = 0;
+        numbersToAdd.forEach((item) => {
+          result += item;
+        });
 
-            return result;
-        };
+        return result;
+      };
 
-        console.log(sumAll(1, 4)); // should be 10
-
+      console.log(sumAll(123, 1)); //Should equal 7626
     </script>
-    
-</body>
+  </body>
 </html>
