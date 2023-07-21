@@ -35,7 +35,21 @@ const power = function (num1, num2) {
   return result;
 };
 
-const factorial = function () {};
+const factorial = function (enteredNum) {
+  // Lmao I had no idea what factorial was
+  // It's multiplying every number from our chosen number down to 1
+  let numArray = [];
+
+  for (let i = enteredNum; i > 0; i--) {
+    numArray.push(i);
+  }
+
+  numArray.forEach((factor) => {
+    enteredNum *= factor;
+  });
+
+  return enteredNum;
+};
 
 // Do not edit below this line
 module.exports = {

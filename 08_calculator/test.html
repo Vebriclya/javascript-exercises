@@ -7,17 +7,23 @@
   </head>
   <body>
     <script>
-      const multiply = function (num1, ...suppliedNumber) {
-        let result = num1;
+      const factorial = function (enteredNum) {
+        // Lmao I had no idea what factorial was
+        // It's multiplying every number from our chosen number down to 1
+        let numArray = [];
 
-        suppliedNumber.forEach((arrayElement) => {
-          result *= arrayElement;
+        for (let i = enteredNum; i > 0; i--) {
+          numArray.push(i);
+        }
+
+        numArray.forEach((factor) => {
+          enteredNum *= factor;
         });
 
-        return result;
+        return enteredNum;
       };
 
-      console.log(`this: ${multiply(2, 4)}, should be: 8`);
+      console.log(`this: ${factorial(2)}, should be: 2`);
     </script>
   </body>
 </html>
