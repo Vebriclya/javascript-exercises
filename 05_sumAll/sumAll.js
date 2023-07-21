@@ -1,7 +1,17 @@
 const sumAll = function (firstNumber, secondNumber) {
   let numbersToAdd = [];
+  let largerNumber;
+  let smallerNumber;
 
-  for (let i = firstNumber; i <= secondNumber; i++) {
+  if (firstNumber > secondNumber) {
+    largerNumber = firstNumber;
+    smallerNumber = secondNumber;
+  } else {
+    firstNumber = smallerNumber;
+    secondNumber = largerNumber;
+  }
+
+  for (let i = smallerNumber; i <= largerNumber; i++) {
     numbersToAdd.push(i);
   }
 
