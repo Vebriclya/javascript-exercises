@@ -12,15 +12,22 @@
         let largerNumber;
         let smallerNumber;
         let result;
+        let isInt;
 
-        if (firstNumber < 0 || secondNumber < 0) {
+        if (typeof firstNumber != "number" || typeof secondNumber != "number") {
           result = "ERROR";
-        } else if (firstNumber > secondNumber) {
-          largerNumber = firstNumber;
-          smallerNumber = secondNumber;
-        } else if (firstNumber < secondNumber) {
-          smallerNumber = firstNumber;
-          largerNumber = secondNumber;
+        }
+
+        if (result != "ERROR") {
+          if (firstNumber < 0 || secondNumber < 0) {
+            result = "ERROR";
+          } else if (firstNumber > secondNumber) {
+            largerNumber = firstNumber;
+            smallerNumber = secondNumber;
+          } else if (firstNumber < secondNumber) {
+            smallerNumber = firstNumber;
+            largerNumber = secondNumber;
+          }
         }
 
         if (result != "ERROR") {
