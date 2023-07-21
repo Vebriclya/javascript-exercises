@@ -8,7 +8,15 @@ const subtract = function (num1, num2) {
   return num1;
 };
 
-const sum = function () {};
+const sum = function (enteredArray) {
+  let result = 0;
+
+  enteredArray.forEach((arrayElement) => {
+    result += arrayElement;
+  });
+
+  return result;
+};
 
 const multiply = function () {};
 
