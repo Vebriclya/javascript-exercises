@@ -1,10 +1,7 @@
 
 
 const removeFromArray = function(enteredArray, ...itemToRemove) {
-    
-    typeof(itemToRemove);
-
-    
+        
     for(const arg of itemToRemove){
         let itemPosition = enteredArray.indexOf(arg);  
         if(itemPosition != -1){
