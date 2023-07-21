@@ -2,33 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
-        const removeFromArray = function(enteredArray = [], ...itemToRemove) {
-    let itemPositions = [];
-
-    for(const arg of itemToRemove){
-        let itemPosition = enteredArray.indexOf(arg);
-        itemPositions.push(itemPosition);
-    }
-
-
-    itemPositions.forEach(position => {
-        enteredArray.splice(position, 1);
-    });
+    const removeFromArray = function(enteredArray, ...itemToRemove) {
     
-    /*
-    enteredArray.splice(firstItemPosition, 1);
-    if(secondItemToRemove != ""){
-        enteredArray.splice(secondItemPosition, 1);
-    }
-    */
-    return enteredArray;
+        typeof(itemToRemove);
 
-};
+        
+        for(const arg of itemToRemove){
+            let itemPosition = enteredArray.indexOf(arg);  
+            enteredArray.splice(itemPosition, 1);
+        }   
+
+
+        return enteredArray;  
+    };
+
+    removeFromArray([1, 2, 3, 4], 7, "tacos")) // Should be 1, 2, 3, 4
+
 
     </script>
 </body>

@@ -1,15 +1,17 @@
-const removeFromArray = function(enteredArray = [], firstItemToRemove, secondItemToRemove = "") {
 
-    let firstItemPosition = enteredArray.indexOf(firstItemToRemove);
-    let secondItemPosition = enteredArray.indexOf(secondItemToRemove);
 
-    enteredArray.splice(firstItemPosition, 1);
-    if(secondItemToRemove != ""){
-        enteredArray.splice(secondItemPosition, 1);
-    }
+const removeFromArray = function(enteredArray, ...itemToRemove) {
+    
+    typeof(itemToRemove);
 
-    return enteredArray;
+    
+    for(const arg of itemToRemove){
+        let itemPosition = enteredArray.indexOf(arg);  
+        enteredArray.splice(itemPosition, 1);
+    }   
 
+
+    return enteredArray;  // return the now modified array
 };
 
 // Do not edit below this line
