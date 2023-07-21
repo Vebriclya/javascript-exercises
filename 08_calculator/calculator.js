@@ -28,7 +28,12 @@ const multiply = function (num1, ...suppliedNumbers) {
   return result;
 };
 
-const power = function () {};
+const power = function (num1, num2) {
+  // number by itself as many times as the second number
+  let result = Math.pow(num1, num2);
+
+  return result;
+};
 
 const factorial = function () {};
 
