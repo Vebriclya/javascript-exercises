@@ -7,7 +7,9 @@ const removeFromArray = function(enteredArray, ...itemToRemove) {
     
     for(const arg of itemToRemove){
         let itemPosition = enteredArray.indexOf(arg);  
-        enteredArray.splice(itemPosition, 1);
+        if(itemPosition != -1){
+            enteredArray.splice(itemPosition, 1);
+        }
     }   
 
 
