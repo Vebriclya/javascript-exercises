@@ -40,15 +40,19 @@ const factorial = function (enteredNum) {
   // It's multiplying every number from our chosen number down to 1
   let numArray = [];
 
-  for (let i = enteredNum; i > 0; i--) {
-    numArray.push(i);
+  if (enteredNum != 0) {
+    for (let i = enteredNum; i > 0; i--) {
+      numArray.push(i);
+    }
+
+    numArray = numArray.slice(1);
+
+    numArray.forEach((factor) => {
+      enteredNum *= factor;
+    });
+  } else {
+    enteredNum = 1;
   }
-
-  numArray = numArray.slice(1);
-
-  numArray.forEach((factor) => {
-    enteredNum *= factor;
-  });
 
   return enteredNum;
 };
