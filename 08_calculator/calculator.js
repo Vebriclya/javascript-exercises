@@ -44,7 +44,7 @@ const factorial = function (enteredNum) {
     numArray.push(i);
   }
 
-  numArray.slice(0, 1);
+  numArray = numArray.slice(1);
 
   numArray.forEach((factor) => {
     enteredNum *= factor;
