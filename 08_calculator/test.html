@@ -16,6 +16,8 @@
           numArray.push(i);
         }
 
+        numArray = numArray.slice(1);
+
         numArray.forEach((factor) => {
           enteredNum *= factor;
         });
