@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sumAll = function(firstNumber, secondNumber) {
+            // count up from first number until it is less than the second number
+            // store all those numbers in an array
+            // add them all together
+
+            let numbersToAdd = [];
+
+            for(let i = firstNumber; i <= secondNumber; i++){
+                numbersToAdd.push(i);
+            }
+
+            let result;
+            numbersToAdd.forEach(item => {
+                item += item;
+                result = item;
+            }
+            )
+
+            return result;
+        };
+
+        console.log(sumAll(1, 4)); // should be 10
+
+    </script>
+    
+</body>
+</html>
