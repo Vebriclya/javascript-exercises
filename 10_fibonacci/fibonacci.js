@@ -1,27 +1,16 @@
 const fibonacci = function (enteredNumber) {
-  //Create a function that returns a specific member of the Fibonacci sequence
-  //A series of numbers in which each number ( Fibonacci number ) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
+  let fibonacciArray = [1, 1];
+  let position1 = 0;
+  let position2 = 1;
 
-  // take a number
-  // make a loop, for as long as the i of that loop is < the entered number
-  // run fibonnaci sequence
-  // each loop add a number to the array
-  // number in array = previous two numbers in array added to each other
-  // i + array at index i+1
-
-  let fibonacciArray = [1, 1, 2, 3, 5, 8];
-
-  for (
-    let arrayPosition1 = 0;
-    arrayPosition1 < enteredNumber;
-    arrayPosition1++
-  ) {
-    let arrayPosition2 = 1;
-    arrayPosition1 + arrayPosition2;
-
-    arrayPosition2++;
+  for (let i = 1; i < enteredNumber; i++) {
+    let position3 = fibonacciArray[position1] + fibonacciArray[position2];
+    fibonacciArray.push(position3);
+    position1++;
+    position2++;
   }
 
+  enteredNumber -= 1;
   return fibonacciArray[enteredNumber];
 };
 
