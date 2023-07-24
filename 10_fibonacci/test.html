@@ -9,15 +9,14 @@
     <script>
       const fibonacci = function (enteredNumber) {
         let fibonacciArray = [];
+        arrayPosition2 = 1;
 
         for (
           let arrayPosition1 = 1;
           arrayPosition1 < enteredNumber;
           arrayPosition1++
         ) {
-          let arrayPosition2 = 1;
           let arrayPosition3 = arrayPosition1 + arrayPosition2;
-
           arrayPosition2++;
           fibonacciArray.push(arrayPosition3);
         }
