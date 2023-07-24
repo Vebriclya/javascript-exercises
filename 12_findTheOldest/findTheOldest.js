@@ -7,7 +7,7 @@ const findTheOldest = function (peopleArray) {
     return ageA - ageB;
   });
 
-  return peopleArray[0].name;
+  return peopleArray[0];
 };
 
 // Do not edit below this line
