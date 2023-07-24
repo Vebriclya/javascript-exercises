@@ -19,11 +19,13 @@
           let arrayPosition3 = arrayPosition1 + arrayPosition2;
 
           arrayPosition2++;
-          arrayPosition3.push(fibonacciArray);
+          fibonacciArray.push(arrayPosition3);
         }
 
         return fibonacciArray[enteredNumber];
       };
+
+      console.log(`${fibonacci(4)} should be: 3`);
     </script>
   </body>
 </html>
