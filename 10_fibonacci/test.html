@@ -8,21 +8,17 @@
   <body>
     <script>
       const fibonacci = function (enteredNumber) {
-        let fibonacciArray = [];
-        arrayPosition2 = 1;
+        // first I need to actually make a fibonnaci loop
+        let fibonacciArray = [1, 1];
+        let position1 = 0;
+        let position2 = 1;
 
-        for (
-          let arrayPosition1 = 1;
-          arrayPosition1 < enteredNumber;
-          arrayPosition1++
-        ) {
-          let arrayPosition3 = arrayPosition1 + arrayPosition2;
-          arrayPosition2++;
-          fibonacciArray.push(arrayPosition3);
+        for (let i = 0; i < enteredNumber; i++) {
+          let position3 = fibonacciArray[position1] + fibonacciArray[position2];
+          fibonacciArray.push(position3);
+          position1++;
+          position2++;
         }
-
-        /*This array is obviously wrong, because position 2 is always going to be incrementing by 1, as is position 1...
-        number at position 1 + number at position 2 = number at position 3... maybe define the first 3 numbers?*/
 
         return fibonacciArray[enteredNumber];
       };
