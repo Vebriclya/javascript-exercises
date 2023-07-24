@@ -9,12 +9,9 @@
     <script>
       const palindromes = function (stringToCheck) {
         stringToCheck = stringToCheck.toLowerCase();
-        let stringToArray = stringToCheck.split("");
-        let lettersOnlyArray;
+        stringToCheck = stringToCheck.replace(/[^a-z]/gi, "");
 
-        stringToArray.forEach((element) => {});
-
-        return stringToArray;
+        return stringToCheck;
       };
 
       console.log(palindromes("A car, a man, a maraca"));
