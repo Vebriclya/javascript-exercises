@@ -1,11 +1,15 @@
 const palindromes = function (stringToCheck) {
-  // remove the spaces from the string, resave to same variable
-  // string to array
-  // reverse the array
-  // array back to (new) string
-  // compare new string to old string
-  // if they're the same, then comparision = true
-  // if not, comparison = false
+  stringToCheck = stringToCheck.toLowerCase();
+  stringToCheck = stringToCheck.replace(/[^a-z]/gi, "");
+  let reveredString = stringToCheck.split("").reverse().join("");
+
+  let isAPalindrome = false;
+
+  if (reveredString === stringToCheck) {
+    isAPalindrome = true;
+  }
+
+  return isAPalindrome;
 };
 
 // Do not edit below this line

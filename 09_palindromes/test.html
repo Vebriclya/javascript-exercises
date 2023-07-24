@@ -10,11 +10,18 @@
       const palindromes = function (stringToCheck) {
         stringToCheck = stringToCheck.toLowerCase();
         stringToCheck = stringToCheck.replace(/[^a-z]/gi, "");
+        let reveredString = stringToCheck.split("").reverse().join("");
 
-        return stringToCheck;
+        let isAPalindrome = false;
+
+        if (reveredString === stringToCheck) {
+          isAPalindrome = true;
+        }
+
+        return isAPalindrome;
       };
 
-      console.log(palindromes("A car, a man, a maraca"));
+      console.log(palindromes("ZZZZ car, a man, a maracaz."));
     </script>
   </body>
 </html>
